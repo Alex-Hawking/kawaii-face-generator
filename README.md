@@ -1,8 +1,10 @@
 # kawaii-face-generator
 
-"Kawaii"
-In Japanese culture, the art of being lovable or cute
-Generate the most kawaii faces with Kawaii Face Generator.
+[Download here](https://alexhawking.itch.io/kawaii-face-generator)
+
+> "Kawaii"
+> In Japanese culture, the art of being lovable or cute
+> Generate the most kawaii faces with Kawaii Face Generator.
 
 # How to use
 When you open the app you will see a row of five buttons with three rectangle underneath. Below is how to use them:
@@ -68,4 +70,4 @@ ctrl + delete: clear face
 If you encounter any other errors email: alexrhawking@gmail.com
 
 # About
-Kawaii Face Generator is built in electron using HTML5, SASS and Node.js. It is packaged with electron-builder and is available on github
+Kawaii Face Generator is built in electron using HTML5, SASS and Node.js. It is packaged with electron-builder and is available on [itch.io](https://alexhawking.itch.io/kawaii-face-generator) for download.
