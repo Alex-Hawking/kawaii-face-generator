@@ -1,0 +1,39 @@
+{
+    "name": "kawaiifacegenerator",
+    "productName": "Kawaii Face Generator",
+    "version": "0.1.0",
+    "author": {
+        "name": "Alex Hawking",
+        "email": "alexrhawking@gmail.com",
+        "url": "http://alexhawking.now.sh/"
+    },
+    "description": "A simple app for making text faces",
+    "main": "main.js",
+    "license": "BSD-3-Clause",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "electron": "^8.3.1",
+        "electron-builder": "^22.7.0",
+        "electron-packager": "^14.2.1"
+    },
+    "build": {
+        "productName": "Kawaii Face Generator",
+        "appId": "org.kfg",
+        "win": {
+            "target": [
+                "nsis",
+                "msi"
+            ],
+            "icon": "build/icon.ico"
+        },
+        "directories": {
+            "buildResources": "build",
+            "output": "release"
+        }
+    }
+}

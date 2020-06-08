@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!--704,880 Possible Combinations-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>:)</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="styles/render.css">
+</head>
+
+<body>
+    <script src="scripts/install.js"></script>
+    <header>
+        <ul>
+            <li id="headerFace">( ͡° ͜ʖ ͡°)</li>
+            <li onclick="quit()">✕</li>
+            <li onclick="min()">&#9147</li>
+        </ul>
+    </header>
+    <main>
+
+        <input type="text" id="faceOutput">
+
+        <div style="text-align: center;">
+            <button onclick="copy()" id="container" title="Copy">&#128203</button>
+            <button onclick="paste()" title="Paste">📄</button>
+            <button onclick="clearInput()" title="Clear">🗑️</button>
+            <button onclick="edit()" title="Edit">✏️</button>
+            <button onclick="shuffle()" title="Shuffle">🔀</button>
+        </div>
+        <div style="text-align: center;">
+            <span id="ears" class="disable-selection" onclick="increase('earNumber', ears)" oncontextmenu="decrease('earNumber', ears) ">( )</span>
+            <span id="mouths" class="disable-selection" onclick="increase( 'mouthNumber', mouths)" oncontextmenu="decrease('mouthNumber', mouths)">( )</span>
+            <span id="eyes" class="disable-selection" onclick="increase( 'eyeNumber', eyes)" oncontextmenu="decrease('eyeNumber', eyes)">( )</sp>
+        </div>
+
+        <h3>&#128433 Click to increase part, right click to decrease</h3>
+    </main>
+
+
+    <script src="scripts/render.js"></script>
+
+</body>
+
+</html>

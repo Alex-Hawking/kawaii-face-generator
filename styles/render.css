@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    -webkit-app-region: drag;
+    text-align: center;
+    font-size: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#headerFace:hover {
+    cursor: none;
+}
+
+li {
+    display: inline;
+    -webkit-app-region: no-drag;
+}
+
+h3 {
+    position: absolute;
+    text-align: center;
+    font-family: Tahome, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: small;
+    bottom: 10px;
+    width: 100%;
+}
+
+li:nth-of-type(1) {
+    float: left;
+    font-family: News-Gothic, sans-serif;
+    font-size: 12px;
+    padding: 4.5px 10px;
+}
+
+li:nth-of-type(3) {
+    font-size: 19.75px;
+    padding: 0px 20px;
+}
+
+li:nth-of-type(2) {
+    font-size: 15px;
+    padding: 3.15px 17px;
+}
+
+li:nth-of-type(2),
+li:nth-of-type(3) {
+    float: right;
+    background: white;
+    color: black;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+li:nth-of-type(2):hover,
+li:nth-of-type(3):hover {
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+input[type=text]:nth-of-type(1),
+select {
+    text-align: center;
+    width: 380px;
+    font-size: 20px;
+    padding: 12px 10px;
+    margin: 10px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+input[type=text]:nth-of-type(1):focus {
+    border: 1px solid black;
+    outline: none !important;
+}
+
+div {
+    margin: 5px, 10px;
+}
+
+div:nth-of-type(1) button {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+div button,
+p {
+    display: inline-block;
+}
+
+#partParent {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+div span,
+button {
+    cursor: pointer;
+}
+
+button {
+    margin-top: 5px;
+    padding: 3px;
+    border: 1px solid darkGrey;
+    border-radius: 3px;
+    color: white;
+    background: white;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+button:hover {
+    border-color: black;
+}
+
+button:active,
+button:focus {
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+}
+
+span {
+    margin-top: 10px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 20px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid darkGrey;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+span:hover {
+    border-color: black;
+}
+
+
+/*# sourceMappingURL=render.css.map */
