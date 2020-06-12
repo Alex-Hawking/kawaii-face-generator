@@ -1,10 +1,29 @@
+![Header](https://img.itch.zone/aW1nLzM1OTYzNDQucG5n/original/rnzUQI.png)
 # kawaii-face-generator
 
-[Download here](https://alexhawking.itch.io/kawaii-face-generator)
+> # "Kawaii"
+> ## In Japanese culture, the art of being lovable or cute
 
-> "Kawaii"
-> In Japanese culture, the art of being lovable or cute
-> Generate the most kawaii faces with Kawaii Face Generator.
+
+### Generate the most kawaii faces with Kawaii Face Generator.
+
+![Screenshot](https://img.itch.zone/aW1hZ2UvNjY1NjMyLzM1OTY0NTUuanBn/794x1000/ung52R.jpg)
+
+# Install
+
+## itch.io (Preffered)
+
+> Mac or Windows
+
+Download and run the installer from [here](https://alexhawking.itch.io/kawaii-face-generator).
+
+## Command Line
+
+> Any platform
+
+- Clone or download this folder
+- `cd` into the folder and run `npm install electron --save-dev`
+- The run `electron start`
 
 # How to use
 When you open the app you will see a row of five buttons with three rectangle underneath. Below is how to use them:
