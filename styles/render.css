@@ -3,11 +3,9 @@
     padding: 0;
     -webkit-user-select: none;
 }
-
 body {
     overflow: hidden;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -28,11 +26,9 @@ ul {
 #headerFace:hover {
     cursor: none;
 }
-
 li {
     display: inline;
     -webkit-app-region: no-drag;
-}
 
 h3 {
     position: absolute;
@@ -43,25 +39,21 @@ h3 {
     bottom: 10px;
     width: 100%;
 }
-
 li:nth-of-type(1) {
     float: left;
     font-family: News-Gothic, sans-serif;
     font-size: 12px;
     padding: 4.5px 10px;
 }
-
 li:nth-of-type(3) {
     font-size: 19.75px;
     padding: 0px 20px;
     padding-top: 2.3px;
 }
-
 li:nth-of-type(2) {
     font-size: 15px;
     padding: 3.15px 17px;
 }
-
 li:nth-of-type(2),
 li:nth-of-type(3) {
     float: right;
@@ -70,14 +62,12 @@ li:nth-of-type(3) {
     -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
 }
-
 li:nth-of-type(2):hover,
 li:nth-of-type(3):hover {
     cursor: pointer;
     background: black;
     color: white;
 }
-
 input[type=text]:nth-of-type(1),
 select {
     text-align: center;
@@ -95,39 +85,25 @@ select {
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
-
 input[type=text]:nth-of-type(1):focus {
     border: 1px solid black;
     outline: none !important;
 }
-
 div {
     margin: 5px, 10px;
 }
-
 div:nth-of-type(1) button {
     margin-left: 10px !important;
     margin-right: 10px !important;
 }
-
 div button,
 p {
     display: inline-block;
 }
-
-#partParent {
-    display: inline-block;
-    width: 100%;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-}
-
 div span,
 button {
     cursor: pointer;
 }
-
 button {
     margin-top: 5px;
     padding: 3px;
@@ -138,18 +114,15 @@ button {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
-
 button:hover {
     border-color: black;
 }
-
 button:active,
 button:focus {
     outline: 0;
     outline-style: none;
     outline-width: 0;
 }
-
 span {
     margin-top: 10px;
     vertical-align: top;
@@ -163,10 +136,6 @@ span {
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
-
 span:hover {
     border-color: black;
 }
-
-
-/*# sourceMappingURL=render.css.map */
