@@ -7,9 +7,7 @@ var earNumber = 0;
 var mouthNumber = 0;
 var eyeNumber = 0;
 //Import Lists/Create lists if they don't exist
-if (fs.existsSync(app.getPath("userData") + '/faces')) {
-    console.log("Faces exist!")
-} else {
+if (fs.existsSync(app.getPath("userData") + '/faces')) {} else {
     installFaces();
 }
 //Declare Lists and remove empty elements
@@ -19,7 +17,23 @@ var eyes = fs.readFileSync(app.getPath("userData") + '/faces/eyes.txt', 'utf8').
 var eyes = eyes.filter(e => e);
 var ears = ears.filter(e => e);
 var mouths = mouths.filter(e => e);
-//Generate Random Parts
+
+//See if new faces are added in new update
+//Gets any faces added in updates
+neweyes = eyesarr.filter((item) => !eyes.includes(item))
+newears = earsarr.filter((item) => !ears.includes(item))
+newmouths = mouthsarr.filter((item) => !mouths.includes(item))
+    //Adds new faces to .txt files and lists
+function newFaces(name, list, newList) {
+    for (i in newList) {
+        fs.appendFileSync(app.getPath("userData") + '/faces/' + name + '.txt', newList[i] + "\n");
+        list.push(newList[i]);
+    }
+}
+newFaces('eyes', eyes, neweyes);
+newFaces('ears', ears, newears);
+newFaces('mouths', mouths, newmouths);
+//Gets random part
 randomPart = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)].split(" ");
 };
@@ -62,9 +76,9 @@ function decrease(number, arr) {
 }
 //Opens faces txt docs in file explorer
 function edit() {
-    shell.openItem(
+    shell.openExternal(
         app.getPath("userData") + '/faces'
-    )
+    );
 }
 //Get Random Face
 function shuffle() {
@@ -79,6 +93,26 @@ function shuffle() {
     earNumber = ears.indexOf(randomEars.join(" "));
     eyeNumber = eyes.indexOf(randomEyes.join(" "));
     mouthNumber = mouths.indexOf(randomMouth);
+}
+//Generate 
+function randomList() {
+    function generateRandomFace() {
+        randomEars = randomPart(ears);
+        randomEyes = randomPart(eyes);
+        randomMouth = mouths[Math.floor(Math.random() * mouths.length)];
+        randomFace = randomEars[0] + randomEyes[0] + randomMouth + randomEyes[1] + randomEars[1]
+        return randomFace;
+    }
+    fs.writeFile(app.getPath('desktop') + '/randomFaces.txt', '', (err) => { if (err) throw err; });
+    i = 0;
+    while (i < 60) {
+        i++
+        fs.appendFileSync(app.getPath('desktop') + '/randomFaces.txt', (generateRandomFace() + "\n\n"));
+    }
+}
+//Save
+function save() {
+    fs.appendFileSync(app.getPath("userData") + '/faces/savedFaces.txt', (document.getElementById('faceOutput').value + "\n\n"));
 }
 //Copy
 function copy() {
@@ -108,8 +142,16 @@ document.onkeydown = function(e) {
         shuffle();
     } else if (e.ctrlKey && e.key == "q") {
         quit();
+    } else if (e.ctrlKey && e.key == "-") {
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    } else if (e.key == "F11") {
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
     } else if (e.ctrlKey && e.key == "e") {
         increase('earNumber', ears)
+    } else if (e.ctrlKey && e.key == "s") {
+        save()
+    } else if (e.ctrlKey && e.key == "g") {
+        randomList()
     } else if (e.ctrlKey && e.key == "i") {
         increase('eyeNumber', eyes)
     } else if (e.ctrlKey && e.key == "m") {

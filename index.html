@@ -12,6 +12,7 @@
 
 <body>
     <script src="scripts/install.js"></script>
+    <script src="scripts/render.js"></script>
     <header>
         <ul>
             <li id="headerFace">( ͡° ͜ʖ ͡°)</li>
@@ -29,18 +30,17 @@
             <button onclick="clearInput()" title="Clear">🗑️</button>
             <button onclick="edit()" title="Edit">✏️</button>
             <button onclick="shuffle()" title="Shuffle">🔀</button>
+            <button onclick="randomList()" title="Generate List">🎲</button>
+            <button onclick="save()" title="Save Face">💾</button>
         </div>
         <div style="text-align: center;">
-            <span id="ears" class="disable-selection" onclick="increase('earNumber', ears)" oncontextmenu="decrease('earNumber', ears) ">( )</span>
-            <span id="mouths" class="disable-selection" onclick="increase( 'mouthNumber', mouths)" oncontextmenu="decrease('mouthNumber', mouths)">( )</span>
-            <span id="eyes" class="disable-selection" onclick="increase( 'eyeNumber', eyes)" oncontextmenu="decrease('eyeNumber', eyes)">( )</sp>
+            <span id="ears" class="disable-selection" onclick="increase('earNumber', ears)" oncontextmenu="decrease('earNumber', ears)" title="Ears">( )</span>
+            <span id="mouths" class="disable-selection" onclick="increase( 'mouthNumber', mouths)" oncontextmenu="decrease('mouthNumber', mouths)" title="Mouths">( )</span>
+            <span id="eyes" class="disable-selection" onclick="increase( 'eyeNumber', eyes)" oncontextmenu="decrease('eyeNumber', eyes)" title="Eyes">( )</sp>
         </div>
 
-        <h3>&#128433 Click to increase part, right click to decrease</h3>
+        <h3>🖱️ Click to increase part, right click to decrease</h3>
     </main>
-
-
-    <script src="scripts/render.js"></script>
 
 </body>
 
