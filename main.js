@@ -11,7 +11,8 @@ function createWindow() {
         frame: false,
         transparent: true,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true
         }
     });
     // and load the index.html of the app.
@@ -20,6 +21,14 @@ function createWindow() {
     win.resizable = false;
     // Open the DevTools.
     //win.webContents.openDevTools();
+    //Show Window
+    ipc.on('show', (event, args) => {
+        win.show()
+        win.focus()
+    });
+    ipc.on('hide', (event, args) => {
+        win.hide()
+    });
 }
 
 // This method will be called when Electron has finished
@@ -29,12 +38,11 @@ app.whenReady().then(createWindow);
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
-})
-
-//Quit when receives quit message from renderer
+        if (process.platform !== 'darwin') {
+            app.quit()
+        }
+    })
+    //Quit when receives quit message from renderer
 ipc.on('quit', (event, args) => {
     app.quit();
 });

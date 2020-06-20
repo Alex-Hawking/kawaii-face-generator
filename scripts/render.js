@@ -1,7 +1,8 @@
-const { remote, ipcRenderer, clipboard, shell } = require('electron');
+const { remote, ipcRenderer, clipboard, shell, win } = require('electron');
 const path = require('path');
 const app = remote.app;
 var fs = require('fs');
+const { Tray, Menu } = remote;
 //Set Initial Faces
 var earNumber = 0;
 var mouthNumber = 0;
@@ -17,13 +18,12 @@ var eyes = fs.readFileSync(app.getPath("userData") + '/faces/eyes.txt', 'utf8').
 var eyes = eyes.filter(e => e);
 var ears = ears.filter(e => e);
 var mouths = mouths.filter(e => e);
-
 //See if new faces are added in new update
 //Gets any faces added in updates
-neweyes = eyesarr.filter((item) => !eyes.includes(item))
-newears = earsarr.filter((item) => !ears.includes(item))
-newmouths = mouthsarr.filter((item) => !mouths.includes(item))
-    //Adds new faces to .txt files and lists
+neweyes = eyesarr.filter((item) => !eyes.includes(item));
+newears = earsarr.filter((item) => !ears.includes(item));
+newmouths = mouthsarr.filter((item) => !mouths.includes(item));
+//Adds new faces to .txt files and lists
 function newFaces(name, list, newList) {
     for (i in newList) {
         fs.appendFileSync(app.getPath("userData") + '/faces/' + name + '.txt', newList[i] + "\n");
@@ -100,13 +100,13 @@ function randomList() {
         randomEars = randomPart(ears);
         randomEyes = randomPart(eyes);
         randomMouth = mouths[Math.floor(Math.random() * mouths.length)];
-        randomFace = randomEars[0] + randomEyes[0] + randomMouth + randomEyes[1] + randomEars[1]
+        randomFace = randomEars[0] + randomEyes[0] + randomMouth + randomEyes[1] + randomEars[1];
         return randomFace;
     }
     fs.writeFile(app.getPath('desktop') + '/randomFaces.txt', '', (err) => { if (err) throw err; });
     i = 0;
     while (i < 60) {
-        i++
+        i++;
         fs.appendFileSync(app.getPath('desktop') + '/randomFaces.txt', (generateRandomFace() + "\n\n"));
     }
 }
@@ -147,18 +147,83 @@ document.onkeydown = function(e) {
     } else if (e.key == "F11") {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
     } else if (e.ctrlKey && e.key == "e") {
-        increase('earNumber', ears)
+        increase('earNumber', ears);
     } else if (e.ctrlKey && e.key == "s") {
-        save()
+        save();
     } else if (e.ctrlKey && e.key == "g") {
-        randomList()
+        randomList();
     } else if (e.ctrlKey && e.key == "i") {
         increase('eyeNumber', eyes)
     } else if (e.ctrlKey && e.key == "m") {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
-        increase('mouthNumber', mouths)
+        increase('mouthNumber', mouths);
     } else if (e.ctrlKey && e.key == "Delete") {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
-        clearInput()
+        clearInput();
     }
 };
+
+
+let tray = new Tray(path.join(process.resourcesPath, 'tray.png'));
+
+const trayMenuTemplate = [{
+        label: 'Kawaii Face Generator',
+        enabled: false
+    },
+    {
+        label: 'Copy Current Face To Clipboard',
+        click: function() {
+            copy();
+        }
+    },
+    {
+        label: 'Shuffle',
+        click: function() {
+            shuffle();
+        }
+    },
+    {
+        label: 'Generate List',
+        click: function() {
+            randomList();
+        }
+    },
+    { type: 'separator' },
+    {
+        label: 'Edit',
+        click: function() {
+            edit();
+        }
+    },
+    { type: 'separator' },
+
+    {
+        label: 'Show Window',
+        click: function() {
+            ipcRenderer.send('show');
+        }
+    },
+    {
+        label: 'Hide Window',
+        click: function() {
+            ipcRenderer.send('hide');
+        }
+    },
+    {
+        label: 'Quit',
+        click: function() {
+            ipcRenderer.send('quit');
+        }
+    },
+    { type: 'separator' },
+    {
+        label: 'Help',
+        click: async() => {
+            await shell.openExternal('https://alexhawking.itch.io/kawaii-face-generator');
+        }
+    }
+]
+
+let trayMenu = Menu.buildFromTemplate(trayMenuTemplate);
+tray.setContextMenu(trayMenu);
+tray.setToolTip('Kawaii Face Generator');

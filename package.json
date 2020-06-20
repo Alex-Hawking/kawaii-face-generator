@@ -1,7 +1,7 @@
 {
     "name": "kawaiifacegenerator",
     "productName": "Kawaii Face Generator",
-    "version": "0.1.2",
+    "version": "0.1.5",
     "author": {
         "name": "Alex Hawking",
         "email": "alexrhawking@gmail.com",
@@ -31,6 +31,13 @@
             ],
             "icon": "build/icon.ico"
         },
+        "extraFiles": [{
+            "from": "assets",
+            "to": "resources",
+            "filter": [
+                "**/*"
+            ]
+        }],
         "directories": {
             "buildResources": "build",
             "output": "release"
