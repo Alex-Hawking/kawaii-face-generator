@@ -76,9 +76,11 @@ ctrl + delete: clear face
 # The Tray (⎚👅⎚)👌
 
 > [ Windows Only | Version 0.1.5 ]
-When you open the latest version of Kawaii Face Generator you will notice an icon resembling this :
 
+When you open the latest version of Kawaii Face Generator you will notice an icon resembling this :
+```
 (⌐■͟ʖ■)
+```
 Sitting in the bottom right of your screen, in a location known as the tray.
 
 How to control Kawaii Face Generator from the tray
