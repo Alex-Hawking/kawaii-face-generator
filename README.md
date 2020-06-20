@@ -73,8 +73,9 @@ ctrl + i: cycle eyes
 ctrl + m: cycle mouths
 ctrl + delete: clear face
 ```
-The Tray (⎚👅⎚)👌
-[ Windows Only | Version 0.1.5 ]
+# The Tray (⎚👅⎚)👌
+
+> [ Windows Only | Version 0.1.5 ]
 When you open the latest version of Kawaii Face Generator you will notice an icon resembling this :
 
 (⌐■͟ʖ■)
