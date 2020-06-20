@@ -84,26 +84,26 @@ How to control Kawaii Face Generator from the tray
 If you right click on the tray you will be greeted with the following options:
 
 - Copy current face to clipboard
- - Copies the face currently in the input area to the keyboard
- - Helpful for copying faces without bringing the generator in front of the app you are currently using
- - Same function as the 'Copy' button
+  - Copies the face currently in the input area to the keyboard
+  - Helpful for copying faces without bringing the generator in front of the app you are currently using
+  - Same function as the 'Copy' button
 - Shuffle
- - Performs same function as the 'Shuffle' buttl
+  - Performs same function as the 'Shuffle' button
 - Generate list
- - Generates list of 60 random faces, saves list to desktop
- - Same function as 'Generate List' button
+  - Generates list of 60 random faces, saves list to desktop
+  - Same function as 'Generate List' button
 - Edit
- - Open Kawaii Face Generator 'Faces' folder
- - Same function as the 'Edit' button
+  - Open Kawaii Face Generator 'Faces' folder
+  - Same function as the 'Edit' button
 - Show Window
- - If Kawaii Face Generator is hidden reveals and focuses on the window
- - Brings the window in front of all other windows
+  - If Kawaii Face Generator is hidden reveals and focuses on the window
+  - Brings the window in front of all other windows
 - Hide Window (Main function of the tray icon)
- - Hides the application (hides the window and taskbar icon)
- - Allows the app to run invisibly in the background
- - Allows easy access to window through the 'Show Window' function
+  - Hides the application (hides the window and taskbar icon)
+  - Allows the app to run invisibly in the background
+  - Allows easy access to window through the 'Show Window' function
 - Quit
- - Quits application
+  - Quits application
 
 # Troubleshooting
 ## Common Errors:
