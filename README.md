@@ -73,6 +73,37 @@ ctrl + i: cycle eyes
 ctrl + m: cycle mouths
 ctrl + delete: clear face
 ```
+The Tray (⎚👅⎚)👌
+[ Windows Only | Version 0.1.5 ]
+When you open the latest version of Kawaii Face Generator you will notice an icon resembling this :
+
+(⌐■͟ʖ■)
+Sitting in the bottom right of your screen, in a location known as the tray.
+
+How to control Kawaii Face Generator from the tray
+If you right click on the tray you will be greeted with the following options:
+
+- Copy current face to clipboard
+ - Copies the face currently in the input area to the keyboard
+ - Helpful for copying faces without bringing the generator in front of the app you are currently using
+ - Same function as the 'Copy' button
+- Shuffle
+ - Performs same function as the 'Shuffle' buttl
+- Generate list
+ - Generates list of 60 random faces, saves list to desktop
+ - Same function as 'Generate List' button
+- Edit
+ - Open Kawaii Face Generator 'Faces' folder
+ - Same function as the 'Edit' button
+- Show Window
+ - If Kawaii Face Generator is hidden reveals and focuses on the window
+ - Brings the window in front of all other windows
+- Hide Window (Main function of the tray icon)
+ - Hides the application (hides the window and taskbar icon)
+ - Allows the app to run invisibly in the background
+ - Allows easy access to window through the 'Show Window' function
+- Quit
+ - Quits application
 
 # Troubleshooting
 ## Common Errors:
