@@ -1,3 +1,4 @@
+<b>The final version of this app was released on Oct 11, 2020. It is no longer being updated.</b>
 ![Header](https://img.itch.zone/aW1nLzM1OTYzNDQucG5n/original/rnzUQI.png)
 # kawaii-face-generator
 
